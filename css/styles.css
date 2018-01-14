@@ -151,11 +151,10 @@ body {
   width: 100%; }
 
 .results__info {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
   margin-left: 20px;
-  max-width: 300px; }
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 280px;
+  flex: 0 0 280px; }
 
 .results__article {
   border: 1px solid #d9deda;
