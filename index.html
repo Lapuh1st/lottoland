@@ -3,9 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <title>Lottoland</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
     <link href="css/styles.css" media="screen" rel="stylesheet" type="text/css"/>
 </head>
 <body>
+    <header class="header container">
+        <img class="header__logo" src="https://www.lottoland.com/skins/lottoland/images/logo/ll-logo-green-14c4a0ddaf8c5179.svg" alt="logo">
+    </header>
+
+    <div class="container">
+        <div class="results">
+            <h1 class="results__title">EuroJackpot Results & Winning Numbers</h1>
+
+            <div class="results__selects">
+                <select class="results__select">
+                    <option>Fri 12 Jan</option>
+                    <option>Fri 05 Jan</option>
+                </select>
+
+                <select class="results__select">
+                    <option>2018</option>
+                    <option>2017</option>
+                </select>
+            </div>
+        </div>
+        <div class="results__numbers">
+            <div class="results__date"><span class="results__date--color">EuroJackpot</span> Results for Friday 12 Jan 2018</div>
+            <ul class="results__list">
+                <li class="result__number">16</li>
+                <li class="result__number result__number--euro">2</li>
+            </ul>
+        </div>
+        <div class="results__section">
+            <div class="results__table-wrap">
+                <table class="results__table">
+                    <thead>
+                    <tr class="result__tr">
+                        <th class="result__th">Tier</th>
+                        <th class="result__th">Match</th>
+                        <th class="result__th">Winners</th>
+                        <th class="result__th">Amount</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="result__tr">
+                        <td class="results__td">I</td>
+                        <td class="results__td">5 Numbers + 2 Euronumbers</td>
+                        <td class="results__td">0x</td>
+                        <td class="results__td">€54,000,000.00</td>
+                    </tr>
+                    <tr class="result__tr">
+                        <td class="results__td">I</td>
+                        <td class="results__td">5 Numbers + 2 Euronumbers</td>
+                        <td class="results__td">0x</td>
+                        <td class="results__td">€54,000,000.00</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <aside class="results__info">
+                <article class="results__article">
+                    <h2 class="results__article-title">The EuroJackpot numbers for 12.01.2018</h2>
+                    <p class="results__article-text">
+                        <strong>The 304th draw for the EuroJackpot was held on 12.01.2018, </strong>
+                        <span>as usual at 9pm in Helsinki.</span>
+                    </p>
+                </article>
+                <article class="results__article">
+                    <h2 class="results__article-title">The EuroJackpot numbers for 12.01.2018</h2>
+                    <p class="results__article-text">
+                        <strong>The 304th draw for the EuroJackpot was held on 12.01.2018, </strong>
+                        <span>as usual at 9pm in Helsinki.</span>
+                    </p>
+                </article>
+            </aside>
+        </div>
+    </div>
+
+
     <div id="qqq" class="qqq"></div>
     <script src="dist/all.js"></script>
 </body>
