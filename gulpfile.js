@@ -2,18 +2,24 @@
 
 const gulp = require('gulp');
 const sass = require('gulp-sass');
-const babel = require('gulp-babel');
-const concat = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');
+const browserify = require('browserify');
+const babelify = require('babelify');
+const source = require('vinyl-source-stream');
+const gutil = require('gulp-util');
 
-gulp.task('babel', () =>
-    gulp.src('js/*.js')
-        .pipe(babel({
-            presets: ['env']
-        }))
-        .pipe(concat('all.js'))
-        .pipe(gulp.dest('dist'))
-);
+gulp.task('scripts', function() {
+    browserify({
+        entries: './js/fetch-data.js',
+        debug: true
+    })
+        .transform(babelify)
+        .on('error',gutil.log)
+        .bundle()
+        .on('error',gutil.log)
+        .pipe(source('js/app.js'))
+        .pipe(gulp.dest(''));
+});
 
 gulp.task('scss', function () {
     return gulp.src('./scss/styles.scss')
