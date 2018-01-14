@@ -24,9 +24,16 @@ export function generateRowTemplate(rows) {
                      <td class="results__td">${staticData['row'+index].roman}</td>
                      <td class="results__td">${staticData['row'+index].match}</td>
                      <td class="results__td">${rows['rank'+index].winners}x</td>
-                     <td class="results__td">€${rows['rank'+index].prize}</td>
+                     <td class="results__td">${currencyFormat(rows['rank'+index].prize)}</td>
                  </tr>`;
         result += row;
     }
     return result;
+}
+
+function currencyFormat (amount) {
+    const bigNum = amount.toString();
+    const splitedNum = `${bigNum.substring(0, bigNum.length - 2)}.${bigNum.substring(bigNum.length - 2, bigNum.length)}`;
+
+    return parseFloat(splitedNum).toLocaleString(undefined, { style: 'currency', currency: 'EUR' });
 }
